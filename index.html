@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Without this tag, phones won't use Bootstrap's responsive breakpoints -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conference App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== MEMBER 2: NAVBAR (navbar navbar-dark bg-dark, collapse toggler) ===== -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- TODO Member 2 -->
+  </nav>
+
+  <!-- ===== HERO (id=home) ===== -->
+  <header id="home" class="bg-warning text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-light">Full Stack Conf</h1>
+      <p class="lead fs-6 text-secondary">A One-Day Conference About All Things JavaScript</p>
+      <!-- MEMBER 2: btn-group with "Register Now" + "See Speakers" (href="#speakers") -->
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== ABOUT: 3 columns on md+, stacked on mobile (id=about) ===== -->
+    <section id="about" class="row py-4">
+      <div class="col-12 col-md-4">
+        <h5 class="fw-bold">Expert Speakers</h5>
+        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
+        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
+        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h5 class="fw-bold">About Full Stack Conf</h5>
+        <img src="images/about.jpg" class="img-fluid mb-3" alt="Conference venue">
+        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
+        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h5 class="fw-bold">What you will Learn</h5>
+        <!-- MEMBER 2: list-group with MongoDB, Express, React, Node JS, ES2015, Babel -->
+      </div>
+    </section>
+
+    <!-- ===== SPEAKERS: 1 col mobile, 2 tablet, 3 desktop (id=speakers) ===== -->
+    <section id="speakers" class="py-4">
+      <h2 class="text-center fw-light text-secondary mb-4">Speakers</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <!-- MEMBER 2: 6 cards, each inside <div class="col"> ... </div> -->
+      </div>
+    </section>
+
+    <!-- ===== SCHEDULE (id=schedule) ===== -->
+    <section id="schedule" class="py-4">
+      <h2 class="text-center fw-light text-secondary mb-4">Schedule</h2>
+      <!-- MEMBER 2: list-group with 7 items + yellow badges; Lunch row highlighted -->
+      <div class="text-center my-4">
+        <!-- MEMBER 2: outline button "Don't Miss out Register Now" (opens modal) -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="container border-top py-4">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h6 class="small fw-bold text-secondary">About Paragraph</h6>
+        <p class="small text-secondary">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores.</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <h6 class="small fw-bold text-secondary">Stay up to date on Paragraph Conference</h6>
+        <!-- MEMBER 2: input-group with text input + "Sign up" button -->
+      </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3 small">
+      <div>
+        <!-- MEMBER 2: Community, Tracks links + "Other Confs" dropup split button -->
+      </div>
+      <span class="text-secondary">&copy; 2018 Full Stack Conf &amp; Paragraph</span>
+    </div>
+  </footer>
+
+  <!-- ===== MEMBER 2: REGISTER MODAL (id="registerModal") ===== -->
+
+  <!-- Bootstrap's own JS: needed for the navbar toggler, modal and dropdown. Not custom JS. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
