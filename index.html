@@ -2,93 +2,293 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Without this tag, phones won't use Bootstrap's responsive breakpoints -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Conference App</title>
+  <title>Full Stack Conf</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ===== MEMBER 2: NAVBAR (navbar navbar-dark bg-dark, collapse toggler) ===== -->
+  <!-- MEMBER 2: Responsive Navbar -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <!-- TODO Member 2 -->
+    <div class="container">
+      <a class="navbar-brand" href="#home">Full Stack Conf</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-md-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li class="nav-item ms-md-2">
+            <button type="button" class="btn btn-warning mt-2 mt-md-0"
+              data-bs-toggle="modal" data-bs-target="#registerModal">
+              Register
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <!-- ===== HERO (id=home) ===== -->
+  <!-- HERO -->
   <header id="home" class="bg-warning text-center py-5">
     <div class="container">
       <h1 class="display-5 fw-light">Full Stack Conf</h1>
       <p class="lead fs-6 text-secondary">A One-Day Conference About All Things JavaScript</p>
-      <!-- MEMBER 2: btn-group with "Register Now" + "See Speakers" (href="#speakers") -->
+      <div class="btn-group mt-3" role="group" aria-label="Conference actions">
+        <button type="button" class="btn btn-primary"
+          data-bs-toggle="modal" data-bs-target="#registerModal">
+          Register Now
+        </button>
+        <a href="#speakers" class="btn btn-outline-dark">See Speakers</a>
+      </div>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- ===== ABOUT: 3 columns on md+, stacked on mobile (id=about) ===== -->
-    <section id="about" class="row py-4">
+    <!-- ABOUT: 3 columns on medium screens and larger -->
+    <section id="about" class="row py-4 g-4">
       <div class="col-12 col-md-4">
         <h5 class="fw-bold">Expert Speakers</h5>
-        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
-        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
-        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
+        <p class="small">Learn from experienced developers who build modern web applications and share practical advice.</p>
+        <p class="small">Discover approaches to writing clean, useful, and maintainable code.</p>
+        <p class="small">Meet people who are passionate about JavaScript and web development.</p>
       </div>
 
       <div class="col-12 col-md-4">
         <h5 class="fw-bold">About Full Stack Conf</h5>
-        <img src="images/about.jpg" class="img-fluid mb-3" alt="Conference venue">
-        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
-        <p class="small">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores et ea rebum.</p>
+        <img src="images/about.jpg" class="img-fluid mb-3 rounded"
+          alt="Conference venue" loading="lazy">
+        <p class="small">Full Stack Conf is a one-day event about JavaScript and modern web development.</p>
+        <p class="small">Explore tools and ideas for building applications from the frontend to the backend.</p>
       </div>
 
       <div class="col-12 col-md-4">
-        <h5 class="fw-bold">What you will Learn</h5>
-        <!-- MEMBER 2: list-group with MongoDB, Express, React, Node JS, ES2015, Babel -->
+        <h5 class="fw-bold">What You Will Learn</h5>
+        <ul class="list-group">
+          <li class="list-group-item">MongoDB</li>
+          <li class="list-group-item">Express</li>
+          <li class="list-group-item">React</li>
+          <li class="list-group-item">Node JS</li>
+          <li class="list-group-item">ES2015</li>
+          <li class="list-group-item">Babel</li>
+        </ul>
       </div>
     </section>
 
-    <!-- ===== SPEAKERS: 1 col mobile, 2 tablet, 3 desktop (id=speakers) ===== -->
+    <!-- SPEAKERS: 1 column on mobile, 2 on small tablets, 3 on large screens -->
     <section id="speakers" class="py-4">
       <h2 class="text-center fw-light text-secondary mb-4">Speakers</h2>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-        <!-- MEMBER 2: 6 cards, each inside <div class="col"> ... </div> -->
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/speaker-1.jpg" class="card-img-top"
+              alt="Speaker one" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Speaker One</h5>
+              <p class="card-text">JavaScript Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/speaker-2.jpg" class="card-img-top"
+              alt="Speaker two" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Speaker Two</h5>
+              <p class="card-text">Web Development Expert</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/speaker-3.jpg" class="card-img-top"
+              alt="Speaker three" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Speaker Three</h5>
+              <p class="card-text">Frontend Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/speaker-4.jpg" class="card-img-top"
+              alt="Speaker four" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Speaker Four</h5>
+              <p class="card-text">Software Engineer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/speaker-5.jpg" class="card-img-top"
+              alt="Speaker five" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Speaker Five</h5>
+              <p class="card-text">Full Stack Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/speaker-6.jpg" class="card-img-top"
+              alt="Speaker six" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Speaker Six</h5>
+              <p class="card-text">Technology Speaker</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- ===== SCHEDULE (id=schedule) ===== -->
+    <!-- SCHEDULE -->
     <section id="schedule" class="py-4">
       <h2 class="text-center fw-light text-secondary mb-4">Schedule</h2>
-      <!-- MEMBER 2: list-group with 7 items + yellow badges; Lunch row highlighted -->
+
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Registration and Welcome
+          <span class="badge bg-warning text-dark">9:00 AM</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Introduction to JavaScript
+          <span class="badge bg-warning text-dark">9:30 AM</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Building Web Applications
+          <span class="badge bg-warning text-dark">10:30 AM</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          React and Frontend Development
+          <span class="badge bg-warning text-dark">11:30 AM</span>
+        </li>
+        <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+          <strong>Lunch Break</strong>
+          <span class="badge bg-warning text-dark">12:30 PM</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Node.js and Backend Development
+          <span class="badge bg-warning text-dark">1:30 PM</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Questions and Closing
+          <span class="badge bg-warning text-dark">3:00 PM</span>
+        </li>
+      </ul>
+
       <div class="text-center my-4">
-        <!-- MEMBER 2: outline button "Don't Miss out Register Now" (opens modal) -->
+        <button type="button" class="btn btn-outline-primary"
+          data-bs-toggle="modal" data-bs-target="#registerModal">
+          Don't Miss Out — Register Now
+        </button>
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="container border-top py-4">
-    <div class="row">
+    <div class="row g-4">
       <div class="col-12 col-md-6">
         <h6 class="small fw-bold text-secondary">About Paragraph</h6>
-        <p class="small text-secondary">Lorem ipsum dolor sit amet, consetetur sadipscingt accusam et justo duo dolores.</p>
+        <p class="small text-secondary">A conference for people interested in JavaScript, software development, and building for the web.</p>
       </div>
+
       <div class="col-12 col-md-6">
-        <h6 class="small fw-bold text-secondary">Stay up to date on Paragraph Conference</h6>
-        <!-- MEMBER 2: input-group with text input + "Sign up" button -->
+        <h6 class="small fw-bold text-secondary">Stay Up to Date on Paragraph Conference</h6>
+        <form>
+          <label for="newsletterEmail" class="visually-hidden">Email address</label>
+          <div class="input-group">
+            <input type="email" id="newsletterEmail" class="form-control"
+              placeholder="Enter your email" aria-label="Email address" required>
+            <button class="btn btn-primary" type="submit">Sign up</button>
+          </div>
+        </form>
       </div>
     </div>
-    <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3 small">
-      <div>
-        <!-- MEMBER 2: Community, Tracks links + "Other Confs" dropup split button -->
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 border-top pt-3 mt-3 small">
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <a href="#about" class="text-decoration-none">Community</a>
+        <a href="#speakers" class="text-decoration-none">Tracks</a>
+
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-secondary btn-sm">Other Confs</button>
+          <button type="button"
+            class="btn btn-secondary btn-sm dropdown-toggle dropdown-toggle-split"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#home">Full Stack Conf</a></li>
+            <li><a class="dropdown-item" href="#schedule">Conference Schedule</a></li>
+          </ul>
+        </div>
       </div>
+
       <span class="text-secondary">&copy; 2018 Full Stack Conf &amp; Paragraph</span>
     </div>
   </footer>
 
-  <!-- ===== MEMBER 2: REGISTER MODAL (id="registerModal") ===== -->
+  <!-- MEMBER 2: Registration Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1"
+    aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register for Full Stack Conf</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
 
-  <!-- Bootstrap's own JS: needed for the navbar toggler, modal and dropdown. Not custom JS. -->
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullName" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="registrationEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="registrationEmail" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="attendeeRole" class="form-label">Your Role</label>
+              <select class="form-select" id="attendeeRole" required>
+                <option value="">Choose a role</option>
+                <option value="student">Student</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Registration</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap's bundle powers the navbar, modal, and dropdown; no custom JavaScript is used. -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
